@@ -459,7 +459,7 @@ namespace YTSubConverter.UI.Win
                 string outputFilePath = Path.ChangeExtension(_txtInputFile.Text, outputExtension);
                 outputDoc.Save(outputFilePath);
 
-                _lblConversionSuccess.Text = string.Format(Resources.SuccessfullyCreated0, Path.GetFileName(outputFilePath));
+                _lblConversionSuccess.Text = string.Format(Resources.SuccessfullyCreated0, Path.GetFileName(outputFilePath) + " at " + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff") );
                 _lblConversionSuccess.Visible = true;
                 await Task.Delay(4000);
                 _lblConversionSuccess.Visible = false;
