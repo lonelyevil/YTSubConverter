@@ -136,7 +136,7 @@ namespace YTSubConverter.UI.Win
             // and renames that to the original name.
             _subtitleRenameWatcher.EnableRaisingEvents = false;
             _subtitleRenameWatcher.Path = Path.GetDirectoryName(filePath);
-            _subtitleRenameWatcher.Filter = Path.GetFileNameWithoutExtension(filePath) + "_tmp_*" + Path.GetExtension(filePath);
+            _subtitleRenameWatcher.Filter = Path.GetFileNameWithoutExtension(filePath) + "*tmp*" + Path.GetExtension(filePath);
             
             _btnConvert.Enabled = true;
         }
